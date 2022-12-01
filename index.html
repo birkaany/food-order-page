@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>Pizza Time</title>
+</head>
+
+<body class="bg-red-[#E5E5E5] font-mainFont">
+  <header>
+    <div class="container mx-auto">
+      <nav class="flex justify-between items-center my-4 p-4">
+        <img src="/assets/img/logo.png" alt="">
+        <ul class="flex space-x-6">
+          <li class="text-th-red-500"><a href="/">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Promo</a></li>
+        </ul>
+        <div class="relative">
+          <button id="cartBtn" class="w-10 h-10 bg-th-red-500 rounded-full p-2">
+            <div id="cartCounter"
+              class="absolute -top-2 -left-2 bg-gray-200 rounded-full w-5 h-5 flex justify-center items-center"></div>
+            <img src="/assets/icons/shopping-cart.png" alt="" />
+          </button>
+          <div id="cart"
+            class="w-72 absolute right-0  toggle-menu transition-opacity duration-500 grid grid-rows-[auto_1fr] border bg-white border-[#bdbdbd] rounded-[30px]">
+            <div id="cart-items" class="">
+            </div>
+            <div class="cart-total p-6 text-center border-l-[#bdbdbd]">
+              <h2>Cart Total</h2>
+              <p id="cart-total" class="text-3xl text-th-green-400"></p>
+              <button id="paymentBtn" disabled
+                class="font-medium text-sm bg-gray-400 text-white uppercase px-6 py-2 rounded-3xl mt-5">Proceed
+                to payment</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="hero-section"
+      class="w-full h-[300px] flex items-center bg-no-repeat bg-contain bg-right bg-[url('/assets/img/margherita-pizza-hero.jpg')] sm:h-[500px] 2xl:h-[700px]">
+      <div class="container mx-auto px-4">
+        <h1 class="font-bold text-6xl leading-normal text-th-green-800  2xl:text-7xl">Friday Pizza!</h1>
+        <p class="font-medium text-4xl text-th-green-800  2xl:text-5xl">Time to enjoy our delicious
+          pizza.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="menu mt-16">
+    <div class="container mx-auto">
+      <h2 class="text-center text-th-green-800 font-semibold text-4xl">Recommended menu</h2>
+      <ul id="menu-items"
+        class="menu-items flex flex-col flex-wrap gap-5 justify-center items-center mt-10 sm:flex-row">
+
+      </ul>
+    </div>
+  </section>
+
+  <section id="paymentModal" class="flex justify-center bg-gray-600 bg-opacity-50 absolute top-0 w-full h-full">
+    <div class="container flex justify-center items-center">
+      <div id="modal" class="p-10 bg-white rounded-lg relative">
+        <button id="paymentCloseBtn"
+          class="absolute w-10 h-10 leading-none right-0 top-0 p-3 hover:bg-gray-100 duration-200 rounded-tr-md">x</button>
+        <form id="paymentForm" action="" class="flex flex-col gap-5">
+          <div class="form-group flex flex-col gap-2">
+            <label for="email" class="text-sm">Email</label>
+            <input id="email" type="email" placeholder="example@mail.com"
+              class="h-10 border rounded-lg px-3 py-1 text-sm" required>
+          </div>
+          <div class="form-group flex flex-col gap-2">
+            <label for="name" class="text-sm">Name</label>
+            <input id="name" type="name" placeholder="Your Name" class="h-10 border rounded-lg px-3 py-1 text-sm"
+              required>
+          </div>
+          <div class="form-group flex flex-col gap-2">
+            <label for="card-number" class="text-sm">Card Number</label>
+            <input id="card-number" type="text" placeholder="0000 0000 0000 0000"
+              class="h-10 border rounded-lg px-3 py-1 text-sm" required>
+            <div class="flex gap-2">
+              <input id="card-expiration" type="text" placeholder="MM / YY"
+                class="h-10 border rounded-lg px-3 py-1 text-sm" required>
+              <input id="card-cvc" type="text" placeholder="CVC" class="h-10 border rounded-lg px-3 py-1 text-sm"
+                required>
+            </div>
+          </div>
+          <div class="form-group flex flex-col gap-2">
+            <button id="submit" type="submit"
+              class="h-10 border rounded-lg px-3 py-1 text-sm bg-th-red-500 text-white hover:bg-gray-600 transition-all duration-200">Payment</button>
+
+          </div>
+        </form>
+        <h3 id="statusMessage" class="text-xl text-center p-8"></h3>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <script src="/js/app.js" type="module"></script>
+</body>
+
+</html>
