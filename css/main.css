@@ -830,6 +830,10 @@ video {
   background-image: url('assets/img/margherita-pizza-hero.jpg');
 }
 
+.bg-\[url\(\'\.\/assets\/img\/margherita-pizza-hero\.jpg\'\)\]{
+  background-image: url('./assets/img/margherita-pizza-hero.jpg');
+}
+
 .bg-contain{
   background-size: contain;
 }
