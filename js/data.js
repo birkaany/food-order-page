@@ -1,7 +1,7 @@
 export const pizzaMenu = [
   {
     name: "Cheese Lovers",
-    img: "/assets/img/cheese-lovers.png",
+    img: "assets/img/cheese-lovers.png",
     desc: "Combination of Alfredo sauce and two cheeses – Romano, and Parmesan.",
     price: 20,
     id: 0,
@@ -9,7 +9,7 @@ export const pizzaMenu = [
   },
   {
     name: "Pepperoni Pizza",
-    img: "/assets/img/pepperoni-pizza.png",
+    img: "assets/img/pepperoni-pizza.png",
     desc: "Pizza with homemade spicy beef sausage.",
     price: 25,
     id: 1,
@@ -17,7 +17,7 @@ export const pizzaMenu = [
   },
   {
     name: "Margherita Pizza",
-    img: "/assets/img/margherita-pizza.png",
+    img: "assets/img/margherita-pizza.png",
     desc: "Made with San Marzano tomatoes, mozzarella cheese, and fresh basil.",
     price: 35,
     id: 2,
