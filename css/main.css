@@ -573,6 +573,10 @@ video {
   position: sticky;
 }
 
+.top-0{
+  top: 0px;
+}
+
 .-top-2{
   top: -0.5rem;
 }
@@ -583,10 +587,6 @@ video {
 
 .right-0{
   right: 0px;
-}
-
-.top-0{
-  top: 0px;
 }
 
 .mx-4{
@@ -625,10 +625,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-16{
-  margin-top: 4rem;
-}
-
 .mt-10{
   margin-top: 2.5rem;
 }
@@ -665,10 +661,6 @@ video {
   height: 100%;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .w-6{
   width: 1.5rem;
 }
@@ -693,28 +685,12 @@ video {
   width: 18rem;
 }
 
-.w-1\/2{
-  width: 50%;
-}
-
 .w-1\/4{
   width: 25%;
 }
 
-.w-8{
-  width: 2rem;
-}
-
-.max-w-3xl{
-  max-width: 48rem;
-}
-
-.max-w-xl{
-  max-width: 36rem;
-}
-
-.max-w-sm{
-  max-width: 24rem;
+.w-1\/2{
+  width: 50%;
 }
 
 .max-w-md{
@@ -723,10 +699,6 @@ video {
 
 .flex-auto{
   flex: 1 1 auto;
-}
-
-.flex-1{
-  flex: 1 1 0%;
 }
 
 .select-none{
@@ -835,14 +807,14 @@ video {
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-gray-600{
@@ -854,8 +826,8 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
-.bg-\[url\(\'\/assets\/img\/margherita-pizza-hero\.jpg\'\)\]{
-  background-image: url('/assets/img/margherita-pizza-hero.jpg');
+.bg-\[url\(\'assets\/img\/margherita-pizza-hero\.jpg\'\)\]{
+  background-image: url('assets/img/margherita-pizza-hero.jpg');
 }
 
 .bg-contain{
@@ -935,14 +907,14 @@ video {
   font-family: Fira Sans, sans-serif;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-2xl{
