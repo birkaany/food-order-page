@@ -729,6 +729,12 @@ video {
   flex: 1 1 0%;
 }
 
+.select-none{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .grid-cols-\[1fr_minmax\(100px\2c _2fr\)_1fr\]{
   grid-template-columns: 1fr minmax(100px, 2fr) 1fr;
 }
