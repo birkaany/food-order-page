@@ -826,8 +826,8 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
-.bg-\[url\(\'\.\/assets\/img\/margherita-pizza-hero\.png\'\)\]{
-  background-image: url('./assets/img/margherita-pizza-hero.png');
+.bg-\[url\(\'\.\.\/assets\/img\/margherita-pizza-hero\.png\'\)\]{
+  background-image: url('../assets/img/margherita-pizza-hero.png');
 }
 
 .bg-contain{
