@@ -7,29 +7,38 @@ cartBtn.addEventListener("click", function () {
 });
 const paymentModalOpen = document.getElementById("paymentBtn");
 const paymentModalCloseBtn = document.getElementById("paymentCloseBtn");
-const paymentBtn = document.getElementById("submit");
+const paymentForm = document.getElementById("paymentForm");
 
-paymentBtn.addEventListener("submit", function (e) {
-  validatePayment();
-  e.preventDefault();
+paymentForm.cardNumber.addEventListener("keydown", function (e) {
+  console.log(e.keyCode);
+  if (e.keyCode !== 8) {
+    if (this.value.length === 4 || this.value.length === 9 || this.value.length === 14) {
+      this.value = this.value += " ";
+    }
+  }
 });
 
-function validatePayment() {
-  const paymentForm = document.getElementById("paymentForm");
-
+paymentForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  paymentForm.classList.remove("flex");
   paymentForm.classList.add("hidden");
-
-  document.getElementById("statusMessage").textContent = "Siparişiniz başarıyla alınmıştır";
-}
+  document.getElementById("statusMessage").innerHTML = `
+  <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_WBZkw7.json" background="transparent" speed="1"
+    style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+  `;
+  setTimeout(() => {
+    document.getElementById("statusMessage").innerHTML = "Siparişiniz başarıyla alınmıştır";
+  }, 2000);
+});
 
 paymentModalCloseBtn.addEventListener("click", function () {
-  document.getElementById("paymentModal").classList.remove("flex");
-  document.getElementById("paymentModal").classList.add("hidden");
+  document.getElementById("paymentModal").classList.toggle("flex");
+  document.getElementById("paymentModal").classList.toggle("hidden");
 });
 
 paymentModalOpen.addEventListener("click", function () {
-  document.getElementById("paymentModal").classList.add("flex");
-  document.getElementById("paymentModal").classList.remove("hidden");
+  document.getElementById("paymentModal").classList.toggle("flex");
+  document.getElementById("paymentModal").classList.toggle("hidden");
   document.getElementById("cart").classList.add("toggle-menu");
 });
 
@@ -64,7 +73,7 @@ function getCartHTML() {
     cartItems += `
       <div id="pizza-${cartItem.id}" class="cart-item flex flex-col p-6 border-1 border-b">
                 <div>
-                  <h2 class="text-xs">${cartItem.name}</h2>
+                  <h2 class=" text-sm">${cartItem.name}</h2>
                   <p class="font-light text-xs">${cartItem.desc}</p>
                 </div class="">
                 <p class="text-sm">$${cartItem.price}.00</p>
