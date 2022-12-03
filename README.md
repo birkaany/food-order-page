@@ -19,7 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Stargazers][stars-shield]][stars-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -29,46 +28,59 @@
   <h1 align="center">Pizza Time - Order Page</h1>
 
   <p align="center">
-    You lose unless you hit 21!
+    Time to enjoy your delicious pizza :)
     <br />
     <br />
-    <a href="https://tranquil-pika-d34a0c.netlify.app/">View Demo</a>
+    <a href="https://birkaany.github.io/food-order-page/">View Demo</a>
     ·
-    <a href="https://github.com/birkaany/Blackjack/issues">Report Bug</a>
+    <a href="https://github.com/birkaany/food-order-page/issues">Report Bug</a>
     ·
-    <a href="https://github.com/birkaany/Blackjack/issues">Request Feature</a>
+    <a href="https://github.com/birkaany/food-order-page/issues">Request Feature</a>
   </p>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## <strong>About The Project</strong>
 
-[![Watch the video](https://i.hizliresim.com/2kj27mi.png)](https://youtu.be/3l4qQoJoGh8)
+<p>This is a single page application to simulate pizza ordering page.</p>
 
-<p style="text-align:center">Click to play</p>
+![Watch the video](https://i.hizliresim.com/76gaatx.png)
+
+<!-- <p style="text-align:center">Click to play</p> -->
 <br/>
 
-This is a single player blackjack game. You rarely win and mostly lose but always having fun.
 <br />
 
 <!-- GETTING STARTED -->
 
-## How to play
+## <strong>Design</strong>
 
-Firstly you should enter your name and your budget to play the game. You just have one button called "Hit". Your bet amount is set to 1/10 of your budget, so you have 10 chances before game over. Try not to lose!
+On this project, I used a community [figma design](https://www.figma.com/community/file/1120548508650435658) as reference. Then I expanded the design by adding cart section, checkout modal and mobile version.
 
-## Built With
+<br/>
+
+## <strong>Features</strong>
+
+- Menu items are getting rendered when the page loaded. Thanks to data.js, you can add as many pizza as you want.
+- Each pizza can be added to cart only once via "Add to cart" and then you can increase the amount by plus button inside the cart section.
+- Cart has an indicator that shows total pizza amount in your cart.
+- You can proceed to payment if you have at least one pizza in your cart and fill out the checkout form to complete your order.
+
+<br/>
+
+## <strong>Built With</strong>
 
 This project developed with Vanilla JS and styled with Tailwindcss.
 
+<br/>
 <!-- CONTACT -->
 
-## Contact
+## <strong>Contact<strong>
 
 Birkan Yılmaz - [@twitter](https://twitter.com/adimcikmis9a) - birkanyilmaz41@gmail.com
 
-Project Link: [https://github.com/birkaany/Blackjack](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/birkaany/food-order-page/](https://github.com/birkaany/food-order-page)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -78,7 +90,7 @@ Project Link: [https://github.com/birkaany/Blackjack](https://github.com/your_us
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
 [stars-shield]: https://img.shields.io/github/stars/birkaany/blackjack?style=for-the-badge
-[stars-url]: https://github.com/birkaany/Blackjack/stargazers
+[stars-url]: https://github.com/birkaany/food-order-page/stargazers
 [issues-shield]: https://img.shields.io/github/stars/birkaany/blackjack?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge

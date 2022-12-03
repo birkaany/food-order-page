@@ -27,7 +27,7 @@ paymentForm.addEventListener("submit", function (e) {
     style="width: 300px; height: 300px;" loop autoplay></lottie-player>
   `;
   setTimeout(() => {
-    document.getElementById("statusMessage").innerHTML = "Siparişiniz başarıyla alınmıştır";
+    document.getElementById("statusMessage").innerHTML = "Your order has been received successfully";
   }, 2000);
 });
 
