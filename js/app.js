@@ -10,7 +10,6 @@ const paymentModalCloseBtn = document.getElementById("paymentCloseBtn");
 const paymentForm = document.getElementById("paymentForm");
 
 paymentForm.cardNumber.addEventListener("keydown", function (e) {
-  console.log(e.keyCode);
   if (e.keyCode !== 8) {
     if (this.value.length === 4 || this.value.length === 9 || this.value.length === 14) {
       this.value = this.value += " ";
