@@ -112,9 +112,15 @@ function handleMinusBtn(menuItemID) {
   });
   if (selectedPizza.amount > 1) {
     document.getElementsByClassName(`pizza-amount-${menuItemID}`)[0].innerHTML = selectedPizza.amount -= 1;
+  } else if (selectedPizza.amount == 1) {
+    selectedPizza.amount == 0;
+    const indexOfObj = basket.findIndex((obj) => {
+      return obj.id === selectedPizza.id;
+    });
+    basket.splice(indexOfObj, 1);
   }
 
-  updateCart();
+  renderCart();
 }
 
 function updateCart() {
@@ -135,6 +141,11 @@ function updateCart() {
     paymentModalOpen.classList.remove("bg-gray-400");
     paymentModalOpen.classList.add("bg-th-red-500");
     paymentModalOpen.classList.add("btn-shadow");
+  } else {
+    paymentModalOpen.disabled = true;
+    paymentModalOpen.classList.add("bg-gray-400");
+    paymentModalOpen.classList.remove("bg-th-red-500");
+    paymentModalOpen.classList.remove("btn-shadow");
   }
 }
 
@@ -142,7 +153,7 @@ function getMenu() {
   pizzaMenu.forEach(function (pizza) {
     menuList.innerHTML += `
     <li class="sm:w-72 grid grid-cols-[1fr_minmax(100px,_2fr)_1fr] items-center justify-center border border-[#bdbdbd] mx-4 p-5 gap-5 rounded-l-[180px] rounded-r-[30px] sm:mx-0 sm:grid-cols-1 sm:rounded-r-[0] sm:rounded-l-[0] sm:rounded-t-[180px] sm:rounded-b-[30px] sm:grid-rows-[1fr_minmax(150px,_auto)_auto]">
-          <img class="w-24 sm:w-72" src="${pizza.img}" alt="" />
+          <img class="w-24 sm:w-72" src="${pizza.img}" alt="${pizza.name}" />
           <div>
             <h3 class="font-semibold text-2xl text-left sm:text-center">${pizza.name}</h3>
             <p class="font-thin leading-[18px] mt-4 text-sm text-left sm:text-center">${pizza.desc}</p>
