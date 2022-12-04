@@ -1116,6 +1116,25 @@ video {
   }
 }
 
+@media (min-width: 768px){
+  .md\:w-full{
+    width: 100%;
+  }
+
+  .md\:w-40{
+    width: 10rem;
+  }
+
+  .md\:w-36{
+    width: 9rem;
+  }
+
+  .md\:max-w-fit{
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
+
 @media (min-width: 1536px){
   .\32xl\:h-\[700px\]{
     height: 700px;
